@@ -18,10 +18,25 @@
         #signup {
             display: none;
         }
+
+        body {
+            background: #fd746c;
+            background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+            background: linear-gradient(to right, #ff9068, #fd746c);
+
+        }
+
+        /* new class to be added after the button is clicked */
+        .newbg {
+            background: #232526;
+            background: -webkit-linear-gradient(to right, #414345, #232526);
+            background: linear-gradient(to right, #414345, #232526);
+        }
     </style>
 </head>
 
 <body>
+    <!-- forms and toggling -->
     <button id="login">Login</button>
 
     <div id="lin" style="background-color: rgb(44, 139, 0);width: 15%;">
@@ -57,16 +72,17 @@
             })
         });
     </script>
+    <!-- images and animations -->
     <button id="ani">Day1</button>
     <button id="ani1">Day2</button>
     <button id="fat">FINALLY:(</button>
     <div>
         <image src="images.jpg" style="width: 30px; position: relative;" id="burgir"></image>
-        <image src="images.jpg" style="width: 30px; position: relative;display: none;" id="burgir1" ></image>
-        <image src="images.jpg" style="width: 30px; position: relative;display: none;" id="burgir2" ></image>
+        <image src="images.jpg" style="width: 30px; position: relative;display: none;" id="burgir1"></image>
+        <image src="images.jpg" style="width: 30px; position: relative;display: none;" id="burgir2"></image>
         <image src="images/download (1).png" style="width: 50px; float: right;margin-right: 100px;position: abo
         ;" id=cbum></image>
-         <image src="images/fat-man.jpg" style="width: 200px ;height: 200px; float: right;margin-right: 100px;position: abo
+        <image src="images/fat-man.jpg" style="width: 200px ;height: 200px; float: right;margin-right: 100px;position: abo
          ; display: none" id=fatman></image>
     </div>
     <script>
@@ -84,23 +100,38 @@
                     .animate({ opacity: '0' })
             });
         });
-        // $(document).ready(function () {
-        //     $("#fat").click(function () {
-        //         $("#burgir2").show()
-        //             .animate({ left: '1375px' }, "slow")
-        //             .animate({ opacity: '0' })
-        //     });
-        // });
         $(document).ready(function () {
             $("#fat").click(function () {
                 $("#cbum").hide()
                 $("#fatman").show()
-                
-                    
+
+
+            });
+        });
+    </script>
+    <!-- for changing background -->
+
+    <button type="button" style="margin-top: 200px;" id="changebg">Change background</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#changebg").click(function () {
+                $("body").toggleClass("newbg");
             });
         });
     </script>
 
+    <!-- creating an hover effect
+    <div class="zoom">
+        <p>Hey guys welcome to my Youtube channel</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".zoom").mouseenter(function(){
+                $(this).animate(height,'300px')
+            })
+        })
+    </script> -->
 </body>
 
 </html>
