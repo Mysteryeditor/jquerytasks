@@ -24,6 +24,11 @@
     });
   } );
   </script>
+  <style>.zoom-in {
+    transform: scale(1.2); /* increase the scale by 20% */
+    transition: transform 0.3s ease-in-out; /* add a smooth transition effect */
+}
+</style>
 </head>
 <body>
  
@@ -31,7 +36,18 @@
   <label for="pl">Autocomplete </label>
   <input id="pl">
 </div>
- 
- 
+<div id="hover" style="margin-left: 300px;">
+<img src="/images.jpg">
+</div>
+ <script>
+$(document).ready(function() {
+  $('#hover').hover(
+      function() {
+          $(this).toggleClass('zoom-in');
+      }
+  );
+});
+</script>
+
 </body>
 </html>
