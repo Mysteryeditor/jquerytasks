@@ -6,3 +6,5 @@ $("#lapadd").click(function(){
   
    $("#lap").append("<img src='/images/laptop1.jpg'>");
 })
+
+  
